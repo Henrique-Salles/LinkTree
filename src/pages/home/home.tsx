@@ -1,3 +1,8 @@
+import { Social } from "../../components/social/social";
+
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { SiGithubpages } from "react-icons/si";
+
 export function Home() {
   return (
     <div className="flex flex-col w-full py-4 items-center justify-center">
@@ -12,6 +17,17 @@ export function Home() {
             <p className="text-base md:text-lg">GitHub</p>
           </a>
         </section>
+        <footer className="flex justify-center gap-3 my-4 items-center">
+          <Social url="https://www.instagram.com/henrique_sallesss/">
+            <FaInstagram size={35} color="#FFF" />
+          </Social>
+          <Social url="https://wa.me/5521979622658">
+            <FaWhatsapp size={35} color="#FFF" />
+          </Social>
+          <Social url="https://0henrique-salles.github.io">
+            <SiGithubpages size={70} color="#FFF" />
+          </Social>
+        </footer>
       </main>
     </div>
   );
