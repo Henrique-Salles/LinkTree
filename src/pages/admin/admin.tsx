@@ -1,6 +1,7 @@
 import { Header } from "../../components/header/header";
 import { Input } from "../../components/input/input";
 import { useState } from "react";
+import { FiTrash } from "react-icons/fi";
 
 export function Admin() {
   const [nameInput, setNameInput] = useState("");
@@ -51,21 +52,44 @@ export function Admin() {
           </div>
         </section>
 
-        <div className="flex items-center justify-center flex-col mb-7 p-1 border-gray-100 border rounded-md">
-          <label className="text-white font-mediu mt-2 mb-3">Prévia</label>
-          <article
-            className="w-11/12 max-w-lg flex flex-col items-center justify-between bg-zinc-900 rounded px-1 py-3 font-medium"
-            style={{
-              marginBottom: 8,
-              marginTop: 8,
-              backgroundColor: backgroundInput,
-              color: colorInput,
-            }}
-          >
-            <p>{nameInput}</p>
-          </article>
-        </div>
+        {nameInput !== "" && (
+          <div className="flex items-center justify-center flex-col mb-7 p-1 border-gray-100 border rounded-md">
+            <label className="text-white font-mediu mt-2 mb-3">Prévia</label>
+            <article
+              className="w-11/12 max-w-lg flex flex-col items-center justify-between bg-zinc-900 rounded px-1 py-3 font-medium"
+              style={{
+                marginBottom: 8,
+                marginTop: 8,
+                backgroundColor: backgroundInput,
+                color: colorInput,
+              }}
+            >
+              <p>{nameInput}</p>
+            </article>
+          </div>
+        )}
+
+        <button
+          type="submit"
+          className="mb-7 bg-blue-600 h-9 rounded-md text-white font-medium gap-4 flex justify-center items-center"
+        >
+          Cadastrar
+        </button>
       </form>
+
+      <h2 className="font-bold text-white mb-4 text-2xl">Meus Links</h2>
+
+      <article
+        className="flex justify-between items-center gap-4 w-11/12 max-w-xl rounded py-3 px-3 mb-2 select-none"
+        style={{ backgroundColor: "#00ff11", color: "#fff" }}
+      >
+        <p>Whatsapp</p>
+        <div>
+          <button className="border border-dashed p-1 rounded bg-neutral-900">
+            <FiTrash size={18} color="#fff" />
+          </button>
+        </div>
+      </article>
     </div>
   );
 }
