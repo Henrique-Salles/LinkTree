@@ -6,7 +6,7 @@ export function Admin() {
   const [nameInput, setNameInput] = useState("");
   const [urlInput, setUrlInput] = useState("");
   const [colorInput, setColorInput] = useState("#f1f1f1");
-  const [backgroundInput, setBckgroundInput] = useState("#121212");
+  const [backgroundInput, setBackgroundInput] = useState("#121212");
 
   return (
     <div className="flex items-center flex-col min-h-screen pb-7 px-2 mt-8">
@@ -36,7 +36,7 @@ export function Admin() {
             <input
               type="color"
               value={colorInput}
-              onChange={(e) => setBckgroundInput(e.target.value)}
+              onChange={(e) => setColorInput(e.target.value)}
             />
           </div>
           <div className="flex gap-2">
@@ -46,10 +46,25 @@ export function Admin() {
             <input
               type="color"
               value={backgroundInput}
-              onChange={(e) => setBckgroundInput(e.target.value)}
+              onChange={(e) => setBackgroundInput(e.target.value)}
             />
           </div>
         </section>
+
+        <div className="flex items-center justify-center flex-col mb-7 p-1 border-gray-100 border rounded-md">
+          <label className="text-white font-mediu mt-2 mb-3">Prévia</label>
+          <article
+            className="w-11/12 max-w-lg flex flex-col items-center justify-between bg-zinc-900 rounded px-1 py-3 font-medium"
+            style={{
+              marginBottom: 8,
+              marginTop: 8,
+              backgroundColor: backgroundInput,
+              color: colorInput,
+            }}
+          >
+            <p>{nameInput}</p>
+          </article>
+        </div>
       </form>
     </div>
   );
