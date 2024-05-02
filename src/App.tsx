@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       </Private>
     ),
   },
+  {
+    path: "*",
+    element: <Home />,
+  },
 ]);
 
 export { router };
