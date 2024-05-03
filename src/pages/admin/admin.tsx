@@ -2,6 +2,7 @@ import { Header } from "../../components/header/header";
 import { Input } from "../../components/input/input";
 import { FormEvent, useState } from "react";
 import { FiTrash } from "react-icons/fi";
+import { MdOutlineAddLink } from "react-icons/md";
 import { db } from "../../services/firebaseConnection";
 import {
   addDoc,
@@ -112,6 +113,7 @@ export function Admin() {
           className="mb-7 bg-blue-600 h-9 rounded-md text-white font-medium gap-4 flex justify-center items-center"
         >
           Cadastrar
+          <MdOutlineAddLink size={23} color="#fff" />
         </button>
       </form>
 
