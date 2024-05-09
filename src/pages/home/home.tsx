@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Social } from "../../components/social/social";
 
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { SiGithubpages } from "react-icons/si";
+import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { db } from "../../services/firebaseConnection";
-import { getDocs, collection, orderBy, query, doc } from "firebase/firestore";
+import { getDocs, collection, orderBy, query } from "firebase/firestore";
 
 interface LinkProps {
   id: string;
@@ -67,8 +66,8 @@ export function Home() {
           <Social url="https://wa.me/5521979622658">
             <FaWhatsapp size={35} color="#FFF" />
           </Social>
-          <Social url="https://henrique-salles.github.io">
-            <SiGithubpages size={70} color="#FFF" />
+          <Social url="https://www.facebook.com/henriquesllman">
+            <FaFacebook size={35} color="#FFF" />
           </Social>
         </footer>
       </main>
