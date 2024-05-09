@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/home/home";
 import { Login } from "./pages/login/login";
 import { Admin } from "./pages/admin/admin";
-import { Networks } from "./pages/networks/networks";
+import { NotFound } from "./pages/notfound/notfound";
 import { Private } from "./routes/private";
 
 const router = createBrowserRouter([
@@ -24,16 +24,8 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/admin/social",
-    element: (
-      <Private>
-        <Networks />
-      </Private>
-    ),
-  },
-  {
     path: "*",
-    element: <Home />,
+    element: <NotFound />,
   },
 ]);
 
