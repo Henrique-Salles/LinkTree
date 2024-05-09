@@ -24,7 +24,7 @@ export function Home() {
           <Social url="https://wa.me/5521979622658">
             <FaWhatsapp size={35} color="#FFF" />
           </Social>
-          <Social url="https://0henrique-salles.github.io">
+          <Social url="https://henrique-salles.github.io">
             <SiGithubpages size={70} color="#FFF" />
           </Social>
         </footer>
